@@ -1,0 +1,161 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+
+    font-family: sans-serif;
+    
+}
+.background{   /* esto es para oscurecer un poco el fondo, solo jugar con el ultimo decimal*/
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.8)
+      ), url(img/fondo.jpg);
+
+
+}
+
+
+
+.contenedor{   /* este es el contenido que engloba a todos y facilita el modo responsive*/
+    width: 90%;  /*para que no abarque toda la pantalla sino hasta cierto punto y deje espacio  a los lados*/
+    max-width: 1100px;  /* esto es para que la pantalla no crezca demasiado*/
+    margin: 0 auto; /*esto centra la pagina dejando el porcentaje restante de width*/
+}
+
+.encabezado, .contenido, .contenido-lateral, .pie-pagina{
+    padding: 1em 2em;
+}
+
+.contenido, .contenido-lateral, .pie-pagina{
+    float: left;
+    box-sizing: border-box;  /*esto da espaciado de margin y padding de manera automatica adentro de cada uno*/
+}
+
+.encabezado{
+    height: 60px;
+
+
+}
+.contenido{
+    width: 55%;
+}
+.kember{
+    color: rgb(233, 183, 20);
+    height: auto;    
+
+}
+
+.imagen{
+    width: 100%;
+}
+
+.contenido-lateral{
+    width: 45%;
+    height: 548px;
+}
+
+/*esto es para ponerlo dentro de la caja al login*/
+.formulario-login{
+    background: rgba(0, 0, 0, 0.651);  /*esto es para oscurecer el fondo donde esta todo el login*/
+    width: 60%;  /*esto es para el tamaño del formulario dentro de contenido lateral*/
+    box-shadow: 1px 1px 10px 10px rgba(255, 188, 5, 0.281);  /*esto es para su sombra*/
+    padding: 40px 30px;
+    border-radius: 20px;
+
+
+}
+
+
+.login{
+    text-decoration: none;
+    height:30px;
+    width: 80%;  /* esto es para que el cuadro de texto de usuario y contraseña crezca y re reduzca de manera automatica*/
+    margin: 5px;
+    color:  rgb(233, 183, 20);
+    font-weight: bold;
+
+    
+    /* esto es para quitar el fondo blanco que trae el cuadro de texto*/
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 2px solid rgb(233, 183, 20);  /* esto es para poner la  rayita abajo del cuadro de texto*/
+
+}
+
+.login:hover{ /* este hover sirve para dar cambio de color al pasar el mouse por encima*/
+    border-bottom: 2px solid rgb(110, 112, 110);  
+    transition-duration: 0.5s;    /*esto es para que cambie de dolor despacio*/
+}
+
+
+
+.btn{
+    height:30px; /*esto es para la altura del boton*/
+    margin: 5px;
+    border-radius: 9px;
+    border:3px double rgb(233, 183, 20);
+    background:none;
+    color:  rgb(241, 235, 235);
+    font-weight: bold;
+    width: 40%;
+}
+
+.btn:hover{
+    border: none;
+   background-color:  rgba(241, 202, 72, 0.726);  
+   color: black;
+   
+   transition-duration: 0.7s;
+   
+  
+
+
+}
+
+.registrarse{
+    margin: 5px;
+    color: rgb(233, 183, 20);
+    text-decoration: none;  /*esto es para quitar subrrayado a hibervinvulos*/
+}
+ /* este hover sirve para cambiar de color al pasar por encima el mouse*/
+.registrarse:hover{
+    color: rgb(110, 112, 110);
+    transition-duration: 0.3s;
+}
+
+/*media query sirve para hacer responsive*/
+
+@media screen and (max-width: 800px) {  /* para tabletesto quiere decir si llega a un minimo de 800px tendra que tomar la forma 100% el contenido*/
+    
+    .contenido{
+        width: 100%;  
+    }
+    .contenido-lateral{
+        width: 100%;
+
+    } 
+    .encabezado{
+        height: 10px;  /*cuando llegue a 800 px que el encabezado se reduzca 10px*/
+    
+    
+    }
+}
+
+@media screen and (max-width:400px){  /* para celular esto quiere decir si llega a un minimo de 400px tendra que tomar la forma 100% el contenido*/
+ 
+
+    .contenedor{
+        width: 100%;  
+    }
+
+    .encabezado{
+        height: 10px; /*cuando llegue a 400px que el encabezado se reduzca 10px*/
+    
+    
+    }
+}
